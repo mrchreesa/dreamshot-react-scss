@@ -1,0 +1,83 @@
+.containerList {
+  // width: 30%;
+  padding: 30px;
+  height: fit-content;
+  min-height: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  background: #f9f6f6;
+  border-radius: 15px;
+  .item {
+    display: flex;
+    color: #363636;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 65px;
+    justify-content: space-around;
+  }
+  .dollar {
+    font-size: 13px;
+    color: #ff8515;
+    margin-right: 3px;
+  }
+}
+.containerBtn {
+  margin-top: 20px;
+  margin-block: 6%;
+
+  display: flex;
+  justify-content: center;
+}
+.itemBtn {
+  //   width: 30%;
+  display: flex;
+  align-items: center;
+  background: #f9f6f6;
+  border-radius: 15px;
+  padding: 0px 10px;
+  justify-content: space-between;
+}
+.img {
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+}
+.btn {
+  margin-right: 20px;
+  background: none;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 3px 15px;
+  background: #ff8515;
+  font: inherit;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 30px;
+  cursor: pointer;
+  outline: inherit;
+}
+.btnBasket {
+  margin-left: 20px;
+
+  background: none;
+  border: none;
+  font: inherit;
+
+  cursor: pointer;
+  outline: inherit;
+}
+.btnBasket:hover {
+  border-radius: 15px;
+
+  background: #d7d7d7;
+}
+.input {
+  margin-inline: 10px;
+
+  padding: 5px;
+
+  font-weight: 700;
+}

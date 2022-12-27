@@ -1,0 +1,144 @@
+.container {
+  margin-block: 6%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container .item {
+  width: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #f9f6f6;
+  border-radius: 15px;
+  padding: 0px 10px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container .img {
+  width: 30px;
+  height: 30px;
+  padding: 5px;
+}
+
+.container .btn {
+  margin-right: 20px;
+  background: none;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 3px 15px;
+  background: #ff8515;
+  font: inherit;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 30px;
+  cursor: pointer;
+  outline: inherit;
+}
+
+.container .btnBasket {
+  margin-left: 20px;
+  background: none;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+.container .btnBasket:hover {
+  border-radius: 15px;
+  background: #d7d7d7;
+}
+
+.container .input {
+  margin-inline: 10px;
+  padding: 5px;
+  font-weight: 700;
+}
+
+.container .containerCart {
+  position: absolute;
+  right: 50;
+  left: 50;
+  bottom: 0;
+  top: 40vh;
+  background-color: #f9f6f6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 31%;
+  border-radius: 15px;
+  -webkit-animation: cartFade;
+          animation: cartFade;
+  -webkit-transform: translateY(55%);
+          transform: translateY(55%);
+  -webkit-transition: -webkit-transform 0.5s ease-in;
+  transition: -webkit-transform 0.5s ease-in;
+  transition: transform 0.5s ease-in;
+  transition: transform 0.5s ease-in, -webkit-transform 0.5s ease-in;
+}
+
+.navActive {
+  visibility: hidden;
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
+@-webkit-keyframes cartFade {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+@keyframes cartFade {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+@media (max-width: 900px) {
+  .container {
+    margin-top: 15%;
+  }
+  .container .item {
+    width: 50%;
+  }
+}
+
+@media (max-width: 420px) {
+  .container .item {
+    width: 80%;
+  }
+}
+/*# sourceMappingURL=basket.module.css.map */

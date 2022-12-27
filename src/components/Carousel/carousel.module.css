@@ -1,1 +1,101 @@
-/* No CSS *//*# sourceMappingURL=carousel.modul.css.map */
+.container {
+  width: 100%;
+  margin-top: 5%;
+}
+
+.container .carouselItem {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 20px;
+  margin-top: 30px;
+  background: #f9f6f6;
+  border-radius: 30px;
+  width: 179px;
+  height: 220px;
+}
+
+.container .img {
+  margin-right: -100px;
+  margin-top: -50px;
+  width: 192.48px;
+  height: 120px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+          filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.container .span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container .h4 {
+  padding: 20px 0px 0px 0px;
+  margin: 0px;
+}
+
+.container .caption {
+  padding: 5px;
+  margin: 0px;
+  color: #797979;
+  font-weight: 600;
+}
+
+.container .price {
+  padding: 5px;
+  margin: 0px;
+  font-weight: 700;
+}
+
+.container .dollar {
+  color: #ff8515;
+  margin: 0;
+  padding-right: 0;
+}
+
+.container .button {
+  background: none;
+  color: inherit;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
+.container .buttonImg:hover {
+  border-radius: 10px;
+  background: #d7d7d7;
+}
+
+.container .buttonImg {
+  padding: 10px;
+  border-radius: 10px;
+  background-color: white;
+}
+
+@media (max-width: 900px) {
+  .container {
+    margin-top: 10%;
+  }
+}
+/*# sourceMappingURL=carousel.module.css.map */

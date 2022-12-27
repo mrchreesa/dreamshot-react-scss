@@ -3,3 +3,7 @@
 body {
   font-family: "Poppins", "Helvetica Neue", "Helvetica";
 }
+
+.css-3bmhjh-MuiPaper-root-MuiPopover-paper {
+  width: 30%;
+}

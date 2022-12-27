@@ -4,7 +4,7 @@ import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
 import { data } from "../../data";
 
-const Carousel = () => {
+const Carousel = ({ setCartItems, cartItems }) => {
   let width = window.innerWidth;
   let paddingLeft;
   if (width < 512) {
@@ -14,7 +14,9 @@ const Carousel = () => {
   } else {
     paddingLeft = 100;
   }
-
+  const addToBasket = (item) => {
+    setCartItems([...cartItems, item]);
+  };
   const responsive = {
     0: {
       items: 1.3,
@@ -50,7 +52,7 @@ const Carousel = () => {
               marginRight: "-50px",
             }}
           >
-            <button className={styles.button}>
+            <button onClick={() => addToBasket(item)} className={styles.button}>
               <img
                 className={styles.buttonImg}
                 src="/shopping-basket 2.png"
@@ -62,7 +64,6 @@ const Carousel = () => {
       </div>
     );
   });
-  // console.log(data);
   return (
     <div className={styles.container}>
       <AliceCarousel
@@ -76,10 +77,6 @@ const Carousel = () => {
         disableDotsControls
         disableButtonsControls
         keyboardNavigation
-        // infinite
-        // autoPlayInterval={1000}
-        // animationDuration={1500}
-        // autoPlay
       />
     </div>
   );

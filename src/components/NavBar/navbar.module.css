@@ -34,7 +34,7 @@
   border: none;
   padding: 5px 15px;
   font: inherit;
-  font-size: 1.2vw;
+  font-size: 0.8rem;
   font-weight: 600;
   cursor: pointer;
   outline: inherit;
@@ -57,10 +57,41 @@
   border-radius: 50px;
 }
 
+.container .buttons .buttonGroup {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 10px;
+}
+
+.container .buttons .button:hover {
+  color: #363636;
+}
+
 .container .buttons .img {
   width: 40px;
   height: 35px;
   background: white;
   border-radius: 50px;
+}
+
+@media (max-width: 420px) {
+  .container {
+    margin: 0;
+  }
+  .container .buttons {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .container .buttons .button {
+    font-size: 0.65rem;
+  }
+  .container .buttons .buttonGroup {
+    padding-top: 50px;
+    padding-bottom: 10px;
+  }
+  .container .buttons .deliveryGroup {
+    margin-top: 20px;
+  }
 }
 /*# sourceMappingURL=navbar.module.css.map */

@@ -1,0 +1,35 @@
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 9vw;
+  width: 38vw;
+}
+
+.container .title {
+  color: #363636;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 3.5rem;
+  line-height: 65px;
+  margin: 0;
+  width: 35vw;
+}
+
+.container .titleOrange {
+  font-weight: 700;
+  margin: 0;
+  color: #ff8515 !important;
+}
+
+.container .text {
+  width: 40vw;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+}
+/*# sourceMappingURL=title.module.css.map */

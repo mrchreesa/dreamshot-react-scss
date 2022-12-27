@@ -1,0 +1,66 @@
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 20px 15px;
+}
+
+.container .logo {
+  width: 342px;
+  height: 64px;
+  color: #363636;
+  margin-left: 8vw;
+}
+
+.container .empty {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.container .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 6vw;
+}
+
+.container .buttons .button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 5px 15px;
+  font: inherit;
+  font-size: 1.2vw;
+  font-weight: 600;
+  cursor: pointer;
+  outline: inherit;
+  color: #797979;
+}
+
+.container .buttons .delivery {
+  padding: 5px 15px !important;
+  color: #f17c0f;
+}
+
+.container .buttons .deliveryGroup {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #ffe5cd;
+  border-radius: 50px;
+}
+
+.container .buttons .img {
+  width: 40px;
+  height: 35px;
+  background: white;
+  border-radius: 50px;
+}
+/*# sourceMappingURL=navbar.module.css.map */

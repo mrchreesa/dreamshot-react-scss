@@ -1,9 +1,7 @@
 .containerList {
-  padding: 30px;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
-  min-height: 40%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -16,6 +14,7 @@
           align-items: stretch;
   background: #f9f6f6;
   border-radius: 15px;
+  overflow: auto;
 }
 
 .containerList .item {
@@ -26,9 +25,17 @@
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
-  line-height: 65px;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  line-height: 35px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.containerList .name {
+  margin-right: 70px;
 }
 
 .containerList .dollar {
@@ -37,71 +44,35 @@
   margin-right: 3px;
 }
 
-.containerBtn {
-  margin-top: 20px;
-  margin-block: 6%;
+.containerList .btn {
+  background: none;
+  border: none;
+  border-radius: 50px;
+  margin: 0;
+  color: #ff8515;
+  font: inherit;
+  font-size: 16px;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  cursor: pointer;
+  outline: inherit;
+}
+
+.containerList .total {
+  border-top: 1px solid rgba(121, 121, 121, 0.4);
+  width: 90%;
+  position: absolute;
+  bottom: 0;
+}
+
+.containerList .center {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-
-.itemBtn {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background: #f9f6f6;
-  border-radius: 15px;
-  padding: 0px 10px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.img {
-  width: 30px;
-  height: 30px;
-  padding: 5px;
-}
-
-.btn {
-  margin-right: 20px;
-  background: none;
-  color: white;
-  border: none;
-  border-radius: 10px;
-  padding: 3px 15px;
-  background: #ff8515;
-  font: inherit;
-  font-weight: 700;
-  font-size: 12px;
-  line-height: 30px;
-  cursor: pointer;
-  outline: inherit;
-}
-
-.btnBasket {
-  margin-left: 20px;
-  background: none;
-  border: none;
-  font: inherit;
-  cursor: pointer;
-  outline: inherit;
-}
-
-.btnBasket:hover {
-  border-radius: 15px;
-  background: #d7d7d7;
-}
-
-.input {
-  margin-inline: 10px;
-  padding: 5px;
-  font-weight: 700;
+  text-align: center;
 }
 /*# sourceMappingURL=shoppingcart.module.css.map */

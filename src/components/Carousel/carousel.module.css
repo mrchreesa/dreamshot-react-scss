@@ -1,5 +1,11 @@
 .container {
   width: 100%;
+  filter: blur(0px);
+  -webkit-filter: blur(0px);
+  -webkit-transition: -webkit-filter 0.5s ease-in-out;
+  transition: -webkit-filter 0.5s ease-in-out;
+  transition: filter 0.5s ease-in-out;
+  transition: filter 0.5s ease-in-out, -webkit-filter 0.5s ease-in-out;
   margin-top: 5%;
 }
 
@@ -91,6 +97,15 @@
   padding: 10px;
   border-radius: 10px;
   background-color: white;
+}
+
+.blur {
+  filter: blur(4px);
+  -webkit-filter: blur(4px);
+  -webkit-transition: -webkit-filter 0.5s ease-in-out;
+  transition: -webkit-filter 0.5s ease-in-out;
+  transition: filter 0.5s ease-in-out;
+  transition: filter 0.5s ease-in-out, -webkit-filter 0.5s ease-in-out;
 }
 
 @media (max-width: 900px) {

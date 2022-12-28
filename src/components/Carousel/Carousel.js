@@ -4,7 +4,12 @@ import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
 import { data } from "../../data";
 
-const Carousel = ({ setCartItems, cartItems }) => {
+const Carousel = ({ setCartItems, cartItems, active }) => {
+  const addToBasket = (item) => {
+    setCartItems([...cartItems, item]);
+  };
+
+  // carousel breaking points
   let width = window.innerWidth;
   let paddingLeft;
   if (width < 512) {
@@ -14,9 +19,7 @@ const Carousel = ({ setCartItems, cartItems }) => {
   } else {
     paddingLeft = 100;
   }
-  const addToBasket = (item) => {
-    setCartItems([...cartItems, item]);
-  };
+
   const responsive = {
     0: {
       items: 1.3,
@@ -65,14 +68,16 @@ const Carousel = ({ setCartItems, cartItems }) => {
     );
   });
   return (
-    <div className={styles.container}>
+    <div
+      className={
+        active ? `${styles.container} ${styles.blur}` : `${styles.container}`
+      }
+    >
       <AliceCarousel
         mouseTracking
         items={carouselItems}
         paddingLeft={paddingLeft}
         paddingRight={width < 512 ? 10 : 100}
-        // autoWidth
-        // autoHeight
         responsive={responsive}
         disableDotsControls
         disableButtonsControls

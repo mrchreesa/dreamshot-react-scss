@@ -70,8 +70,10 @@
   position: absolute;
   right: 50;
   left: 50;
-  bottom: 0;
-  top: 40vh;
+  padding: 20px 20px;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
   background-color: #f9f6f6;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -80,25 +82,65 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 31%;
   border-radius: 15px;
   -webkit-animation: cartFade;
           animation: cartFade;
+  -webkit-transition: -webkit-animation 2s ease-in;
+  transition: -webkit-animation 2s ease-in;
+  transition: animation 2s ease-in;
+  transition: animation 2s ease-in, -webkit-animation 2s ease-in;
   -webkit-transform: translateY(55%);
           transform: translateY(55%);
-  -webkit-transition: -webkit-transform 0.5s ease-in;
-  transition: -webkit-transform 0.5s ease-in;
-  transition: transform 0.5s ease-in;
-  transition: transform 0.5s ease-in, -webkit-transform 0.5s ease-in;
 }
 
 .navActive {
   visibility: hidden;
-  -webkit-transform: translateX(0%);
-          transform: translateX(0%);
+}
+
+.modal {
+  width: 465px;
+  height: 220px;
+  background: #f9f6f6;
+  border-radius: 15px;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.modal .modalTitle {
+  font-weight: 700;
+  font-size: 35px;
+  margin: 0px;
+  color: #ff8515;
+}
+
+.modal .modalText {
+  font-weight: 600;
+  font-size: 16px;
+  color: #797979;
+  margin-bottom: 40px;
+}
+
+.modal .modalBtn {
+  font-weight: 600;
+  width: 104px;
+  height: 34px;
+  border: none;
+  background: #ff8515;
+  border-radius: 15px;
+  color: #f9f6f6;
 }
 
 @-webkit-keyframes cartFade {

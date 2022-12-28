@@ -1,6 +1,8 @@
 .container {
   width: 100%;
-  // margin-left: 9vw;
+  filter: blur(0px);
+  -webkit-filter: blur(0px);
+  transition: filter 0.5s ease-in-out;
   margin-top: 5%;
   .carouselItem {
     display: flex;
@@ -70,6 +72,11 @@
     border-radius: 10px;
     background-color: white;
   }
+}
+.blur {
+  filter: blur(4px);
+  -webkit-filter: blur(4px);
+  transition: filter 0.5s ease-in-out;
 }
 @media (max-width: 900px) {
   .container {

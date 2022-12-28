@@ -1,9 +1,12 @@
 import React from "react";
 import styles from "./navbar.module.scss";
-
-const NavBar = () => {
+const NavBar = ({ active }) => {
   return (
-    <header className={styles.container}>
+    <header
+      className={
+        active ? `${styles.container} ${styles.blur}` : `${styles.container}`
+      }
+    >
       <h1 className={styles.logo}>BRUNCHY</h1>
       <div className={styles.empty}></div>
       <div className={styles.buttons}>

@@ -1,5 +1,7 @@
 import React from "react";
 import styles from "./navbar.module.scss";
+import PropTypes from "prop-types";
+
 const NavBar = ({ active }) => {
   return (
     <header
@@ -48,6 +50,10 @@ const NavBar = ({ active }) => {
       </div>
     </header>
   );
+};
+
+NavBar.propTypes = {
+  active: PropTypes.bool,
 };
 
 export default NavBar;

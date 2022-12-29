@@ -1,8 +1,9 @@
 import styles from "./basket.module.scss";
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import ShoppingCart from "../ShoppingCart/ShoppingCart";
 import { makeDecimal } from "../../lib/makeDecimalFnc";
 import Modal from "react-modal";
+import PropTypes from "prop-types";
 
 const customStyles = {
   content: {
@@ -21,18 +22,22 @@ const Basket = ({ cartItems, setCartItems, active, setActive }) => {
   let subtitle;
   const [modalIsOpen, setIsOpen] = useState(false);
   function afterOpenModal() {
-    subtitle.style.color = "#f00";
+    // subtitle.style.color = "#f00";
+    console.log("modal is open");
   }
   function closeModal() {
     setIsOpen(false);
     setCartItems([]);
     setActive(false);
   }
-  const toggleClasses = () => {
-    setActive(!active);
-  };
+
   const handleClick = () => {
     setIsOpen(true);
+  };
+
+  // toggle order review popup
+  const toggleClasses = () => {
+    setActive(!active);
   };
 
   // calculating total price
@@ -85,11 +90,29 @@ const Basket = ({ cartItems, setCartItems, active, setActive }) => {
     bottom = "0";
     top = "40vh";
   }
+  // detecting clicks outside the order review and closing
+  const ref = useRef(null);
+
+  function useOutsideAlerter(ref) {
+    useEffect(() => {
+      function handleClickOutside(event) {
+        if (ref.current && !ref.current.contains(event.target)) {
+          // console.log("You clicked outside of me!");
+          setActive(false);
+        }
+      }
+      document.addEventListener("mousedown", handleClickOutside);
+      return () => {
+        document.removeEventListener("mousedown", handleClickOutside);
+      };
+    }, [ref]);
+  }
+  useOutsideAlerter(ref);
 
   return (
     <>
       <div>
-        <div className={styles.container}>
+        <div ref={ref} className={styles.container}>
           <div className={styles.item}>
             <button onClick={toggleClasses} className={styles.btnBasket}>
               <img
@@ -108,6 +131,7 @@ const Basket = ({ cartItems, setCartItems, active, setActive }) => {
             onAfterOpen={afterOpenModal}
             onRequestClose={closeModal}
             style={customStyles}
+            appElement={document.getElementById("root")}
           >
             <div className={styles.modal}>
               {cartItems.length ? (
@@ -131,6 +155,7 @@ const Basket = ({ cartItems, setCartItems, active, setActive }) => {
           </Modal>
 
           <div
+            ref={ref}
             style={{ width: breakingPoints, bottom, top }}
             className={
               active
@@ -139,6 +164,7 @@ const Basket = ({ cartItems, setCartItems, active, setActive }) => {
             }
           >
             <ShoppingCart
+              setActive={setActive}
               cartItems={cartItems}
               setCartItems={setCartItems}
               totalWithDecimal={totalWithDecimal}
@@ -148,6 +174,22 @@ const Basket = ({ cartItems, setCartItems, active, setActive }) => {
       </div>
     </>
   );
+};
+
+Basket.propTypes = {
+  active: PropTypes.bool,
+  cartItems: PropTypes.arrayOf(PropTypes.object),
+  setCartItems: PropTypes.func,
+  data: PropTypes.arrayOf(PropTypes.object),
+  Modal: PropTypes.element,
+  customStyles: PropTypes.object,
+  modalIsOpen: PropTypes.bool,
+  setIsOpen: PropTypes.func,
+  closeModal: PropTypes.func,
+  toggleClasses: PropTypes.func,
+  handleClick: PropTypes.func,
+  ShoppingCart: PropTypes.element,
+  totalWithDecimal: PropTypes.number,
 };
 
 export default Basket;

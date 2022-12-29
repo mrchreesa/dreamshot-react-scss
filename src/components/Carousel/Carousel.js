@@ -2,13 +2,13 @@ import React from "react";
 import styles from "./carousel.module.scss";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
-import { data } from "../../data";
+import data from "../../data.json";
+import PropTypes from "prop-types";
 
 const Carousel = ({ setCartItems, cartItems, active }) => {
   const addToBasket = (item) => {
     setCartItems([...cartItems, item]);
   };
-
   // carousel breaking points
   let width = window.innerWidth;
   let paddingLeft;
@@ -25,10 +25,13 @@ const Carousel = ({ setCartItems, cartItems, active }) => {
       items: 1.3,
       // itemsFit: "contain",
     },
-    512: {
+    612: {
       items: 2,
     },
-    1024: {
+    908: {
+      items: 3,
+    },
+    1224: {
       items: 4,
     },
     2048: {
@@ -86,5 +89,12 @@ const Carousel = ({ setCartItems, cartItems, active }) => {
     </div>
   );
 };
-
+Carousel.propTypes = {
+  active: PropTypes.bool,
+  cartItems: PropTypes.arrayOf(PropTypes.object),
+  setCartItems: PropTypes.func,
+  data: PropTypes.arrayOf(PropTypes.object),
+  AliceCarousel: PropTypes.element,
+  responsive: PropTypes.objectOf(PropTypes.object),
+};
 export default Carousel;

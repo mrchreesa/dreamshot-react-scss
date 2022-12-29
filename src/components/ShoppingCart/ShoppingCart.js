@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./shoppingcart.module.scss";
+import PropTypes from "prop-types";
 
 export default function ShoppingCart({
   cartItems,
@@ -44,3 +45,10 @@ export default function ShoppingCart({
     </div>
   );
 }
+
+ShoppingCart.propTypes = {
+  active: PropTypes.bool,
+  cartItems: PropTypes.arrayOf(PropTypes.object),
+  setCartItems: PropTypes.func,
+  handleDelete: PropTypes.func,
+};

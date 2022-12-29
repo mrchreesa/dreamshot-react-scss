@@ -3,7 +3,7 @@ import NavBar from "../NavBar/NavBar";
 import Title from "../Title/Title";
 import Carousel from "../Carousel/Carousel";
 import Basket from "../Basket/Basket";
-import styles from "./main.module.scss";
+import PropTypes from "prop-types";
 
 const Main = () => {
   const [cartItems, setCartItems] = useState([]);
@@ -27,6 +27,12 @@ const Main = () => {
       />
     </div>
   );
+};
+
+Main.propTypes = {
+  active: PropTypes.bool,
+  cartItems: PropTypes.arrayOf(PropTypes.object),
+  setCartItems: PropTypes.func,
 };
 
 export default Main;

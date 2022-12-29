@@ -1,9 +1,10 @@
 import React from "react";
 import styles from "./title.module.scss";
+import PropTypes from "prop-types";
 
 const Title = ({ active }) => {
   return (
-    <div
+    <section
       className={
         active ? `${styles.container} ${styles.blur}` : `${styles.container}`
       }
@@ -16,8 +17,11 @@ const Title = ({ active }) => {
         This is my Exploration for Fruit - Food Delivery Landing Page 🍕. How
         about you ?
       </p>
-    </div>
+    </section>
   );
+};
+Title.propTypes = {
+  active: PropTypes.bool,
 };
 
 export default Title;

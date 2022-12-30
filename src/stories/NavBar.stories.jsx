@@ -1,6 +1,6 @@
 import React from 'react';
 import NavBar from '../components/NavBar/NavBar'
-import styles from '../components/NavBar/navbar.module.scss'
+import {within, userEvent} from '@storybook/testing-library'
 
 export default {
   title: 'NavBar',
@@ -19,11 +19,10 @@ const Template = (args) => <NavBar {...args}  />;
 
 export const About = Template.bind({});
 
-About.args = {
- fontFamily: "Poppins",
- color: "#797979",
- label: 'About',
- size: 'sm'
+About.play = async ({canvasElement}) => {
+  const canvas = within({canvasElement});
+  const aboutButton = await canvas.getByTestId("about");
+  await userEvent.click(aboutButton);
 };
 
 export const CallUs = Template.bind({});

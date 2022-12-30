@@ -62,6 +62,7 @@
     font-weight: 700;
   }
   .containerCart {
+    min-height: 250px;
     position: absolute;
     right: 50;
     left: 50;
@@ -80,6 +81,8 @@
   visibility: hidden;
 }
 .modal {
+  font-family: fonts.$font-family;
+
   width: 465px;
   height: 220px;
   background: #f9f6f6;

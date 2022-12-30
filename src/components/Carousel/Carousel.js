@@ -22,6 +22,10 @@ const Carousel = ({ setCartItems, cartItems, active }) => {
 
   const responsive = {
     0: {
+      items: 1,
+      // itemsFit: "contain",
+    },
+    400: {
       items: 1.3,
       // itemsFit: "contain",
     },

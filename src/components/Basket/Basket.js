@@ -41,12 +41,18 @@ const Basket = ({ cartItems, setCartItems, active, setActive }) => {
   };
 
   // calculating total price
-  let total = cartItems.reduce(
-    (accumulator, currentValue) => accumulator + currentValue.price,
-    0
-  );
-  let totalWithDecimal = makeDecimal(total);
+  let total;
+  let totalWithDecimal = 0.0;
 
+  console.log(cartItems);
+
+  if (cartItems.length) {
+    total = cartItems.reduce(
+      (accumulator, currentValue) => accumulator + currentValue.price,
+      0
+    );
+    totalWithDecimal = makeDecimal(total);
+  }
   // cart popup breaking points
   let width = window.innerWidth;
   let height = window.innerHeight;
@@ -178,6 +184,7 @@ const Basket = ({ cartItems, setCartItems, active, setActive }) => {
 
 Basket.propTypes = {
   active: PropTypes.bool,
+  setActive: PropTypes.func,
   cartItems: PropTypes.arrayOf(PropTypes.object),
   setCartItems: PropTypes.func,
   data: PropTypes.arrayOf(PropTypes.object),

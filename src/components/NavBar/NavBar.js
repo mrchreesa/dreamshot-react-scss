@@ -19,6 +19,7 @@ const NavBar = ({ active }) => {
               href="https://dreamshot.bg"
               target="_blank"
               rel="noreferrer"
+              data-testid="about"
             >
               About
             </a>

@@ -12,9 +12,9 @@ Brunchy is a simple one page delivery app which allows users to choose their fav
 The app is fully responsive build with React and CSS modules with SASS.
 
 <div >
-<img width="38%" src="./images/Brunchy/Desktop.png" alt="preview" />
-<img width="38%" src="./images/Brunchy/Tablet.png" alt="preview" />
-<img width="18%" src="./images/Brunchy/Phone.png" alt="preview" />
+<img width="44%" src="./images/Brunchy/Desktop.png" alt="preview" />
+<img width="34%" src="./images/Brunchy/Tablet.png" alt="preview" />
+<img width="20%" src="./images/Brunchy/Phone.png" alt="preview" />
 </div >
 <h1 align="center"> 🏠 (https://https://dreamshot-kristian.vercel.app/) </h1>
 </br>

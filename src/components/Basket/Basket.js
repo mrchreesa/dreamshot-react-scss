@@ -55,47 +55,24 @@ const Basket = ({ cartItems, setCartItems, active, setActive }) => {
   }
   // cart popup breaking points
   let width = window.innerWidth;
-  let height = window.innerHeight;
   let breakingPoints;
-  let bottom;
-  let top;
-  if (width < 380 && height < 670) {
-    breakingPoints = "75%";
-    bottom = "10vh";
-    top = "25vh";
-  } else if (width < 380 && height > 670) {
-    breakingPoints = "75%";
-    bottom = "18vh";
-    top = "25vh";
-  } else if (width < 400) {
-    breakingPoints = "75%";
-    bottom = "28vh";
-    top = "25vh";
-  } else if (width < 512) {
-    breakingPoints = "75%";
-    bottom = "35vh";
-    top = "25vh";
-  } else if (width < 769 && height > 1024) {
+
+  if (width <= 500) {
+    breakingPoints = "70%";
+  } else if (width < 920) {
     breakingPoints = "49%";
-    bottom = "35vh";
-    top = "25vh";
-  } else if (width < 769) {
-    breakingPoints = "49%";
-    bottom = "0vh";
-    top = "40vh";
-  } else if (width === 820 && height === 1180) {
-    breakingPoints = "49%";
-    bottom = "43vh";
-    top = "25vh";
-  } else if (width < 900) {
-    breakingPoints = "49%";
-    bottom = "0";
-    top = "40vh";
+  } else if (width < 1250) {
+    breakingPoints = "26%";
+  } else if (width < 1370) {
+    breakingPoints = "27%";
+  } else if (width < 1650) {
+    breakingPoints = "27%";
+  } else if (width < 1650) {
+    breakingPoints = "27%";
   } else {
-    breakingPoints = "29%";
-    bottom = "0";
-    top = "40vh";
+    breakingPoints = "27.5%";
   }
+
   // detecting clicks outside the order review and closing
   const ref = useRef(null);
 
@@ -131,6 +108,23 @@ const Basket = ({ cartItems, setCartItems, active, setActive }) => {
             <button onClick={handleClick} className={styles.btn}>
               Order Now
             </button>
+
+            <div
+              ref={ref}
+              style={{ width: breakingPoints }}
+              className={
+                active
+                  ? `${styles.containerCart} `
+                  : `${styles.containerCart} ${styles.navActive}`
+              }
+            >
+              <ShoppingCart
+                setActive={setActive}
+                cartItems={cartItems}
+                setCartItems={setCartItems}
+                totalWithDecimal={totalWithDecimal}
+              />
+            </div>
           </div>
           <Modal
             isOpen={modalIsOpen}
@@ -159,23 +153,6 @@ const Basket = ({ cartItems, setCartItems, active, setActive }) => {
               )}
             </div>
           </Modal>
-
-          <div
-            ref={ref}
-            style={{ width: breakingPoints, bottom, top }}
-            className={
-              active
-                ? `${styles.containerCart} `
-                : `${styles.containerCart} ${styles.navActive}`
-            }
-          >
-            <ShoppingCart
-              setActive={setActive}
-              cartItems={cartItems}
-              setCartItems={setCartItems}
-              totalWithDecimal={totalWithDecimal}
-            />
-          </div>
         </div>
       </div>
     </>

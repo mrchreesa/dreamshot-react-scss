@@ -5,6 +5,7 @@
   //   margin-inline: 20px;
   margin-block: 6%;
   font-family: fonts.$font-family;
+  position: relative;
 
   display: flex;
   justify-content: center;
@@ -14,7 +15,7 @@
     align-items: center;
     background: #f9f6f6;
     border-radius: 15px;
-    padding: 0px 10px;
+
     justify-content: space-between;
   }
   .img {
@@ -63,16 +64,19 @@
   }
   .containerCart {
     min-height: 250px;
+    height: 40vh;
     position: absolute;
     right: 50;
     left: 50;
-    padding: 20px 20px;
+    bottom: 450%;
+    top: 50;
+    padding: 10px 20px;
     align-items: stretch;
     background-color: #f9f6f6;
     display: flex;
     flex-direction: column;
     border-radius: 15px;
-    animation: cartFade;
+    // animation: cartFade;
     transition: animation 2s ease-in;
     transform: translateY(55%);
   }
@@ -117,26 +121,37 @@
     color: #f9f6f6;
   }
 }
-@keyframes cartFade {
-  from {
-    opacity: 0;
-    transform: translateX(50px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0px);
-  }
-}
+// @keyframes cartFade {
+//   from {
+//     opacity: 0;
+//     transform: translateX(50px);
+//   }
+//   to {
+//     opacity: 1;
+//     transform: translateX(0px);
+//   }
+// }
 
 @media (max-width: 900px) {
   .container {
     margin-top: 15%;
     .item {
-      width: 50%;
+      width: 54%;
     }
   }
 }
-@media (max-width: 420px) {
+@media (max-width: 920px), (min-height: 1100) {
+  .container {
+    margin-top: 15%;
+    .containerCart {
+      bottom: 550%;
+    }
+    .item {
+      width: 54%;
+    }
+  }
+}
+@media (max-width: 500px) {
   .container {
     .item {
       width: 80%;

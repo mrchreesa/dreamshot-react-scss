@@ -25,7 +25,7 @@ const Carousel = ({ setCartItems, cartItems, active }) => {
       items: 1,
       // itemsFit: "contain",
     },
-    400: {
+    380: {
       items: 1.3,
       // itemsFit: "contain",
     },

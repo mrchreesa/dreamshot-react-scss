@@ -11,9 +11,9 @@
 Brunchy is a simple one page delivery app which allows users to choose their favourite brunch meal, then add it to a shopping cart, review the list of meals and place an order.
 The app is fully responsive build with React and CSS modules with SASS.
 
-<img align="center" src="./Brunchy/Desktop-1.png" alt="preview" />
-<img align="center" src="./Brunchy/Tablet-1.png" alt="preview" />
-<img align="center" src="./Brunchy/Phone-1.png" alt="preview" />
+<img align="center" src="./images/Brunchy/Desktop-1.png" alt="preview" />
+<img align="center" src="./images/Brunchy/Tablet-1.png" alt="preview" />
+<img align="center" src="./images/Brunchy/Phone-1.png" alt="preview" />
 
 <h1 align="center"> 🏠 (https://https://dreamshot-kristian.vercel.app/) </h1>
 </br>

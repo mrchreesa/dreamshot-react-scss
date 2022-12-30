@@ -8,6 +8,7 @@ export default {
   parameters: {
     layout: 'fullscreen',
   },
+ 
 };
 
 const Template = (args) => <NavBar {...args}  />;

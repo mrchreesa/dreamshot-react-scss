@@ -1,6 +1,9 @@
+@use "../../scss/fonts";
+@use "../../scss/colours";
+
 .containerList {
-  // width: 30%;
-  // padding: 30px;
+  font-family: fonts.$font-family;
+
   height: fit-content;
   display: flex;
   flex-direction: column;
@@ -27,7 +30,7 @@
   }
   .dollar {
     font-size: 13px;
-    color: #ff8515;
+    color: colours.$orange;
     margin-right: 3px;
   }
 
@@ -37,7 +40,7 @@
     border: none;
     border-radius: 50px;
     margin: 0;
-    color: #ff8515;
+    color: colours.$orange;
     font: inherit;
     font-size: 16px;
     height: max-content;

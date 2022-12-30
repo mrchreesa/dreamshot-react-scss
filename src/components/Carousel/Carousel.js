@@ -42,7 +42,9 @@ const Carousel = ({ setCartItems, cartItems, active }) => {
   const carouselItems = items.map((item, i) => {
     return (
       <div key={i} className={styles.carouselItem}>
-        <img className={styles.img} src={item.image} alt={item.name} />
+        <div className={styles.imgContainer}>
+          <img className={styles.img} src={item.image} alt={item.name} />
+        </div>
         <span className={styles.span}>
           <h4 className={styles.h4}>{item.name}</h4>
           <p className={styles.caption}>{item.caption}</p>
@@ -55,7 +57,7 @@ const Carousel = ({ setCartItems, cartItems, active }) => {
               display: "flex",
               justifyContent: "right",
               width: "100%",
-              marginRight: "-50px",
+              marginRight: "-20px",
             }}
           >
             <button onClick={() => addToBasket(item)} className={styles.button}>

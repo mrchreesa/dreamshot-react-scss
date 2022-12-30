@@ -1,6 +1,5 @@
 import React from 'react';
 import Basket from '../components/Basket/Basket'
-import styles from '../components/NavBar/navbar.module.scss'
 
 export default {
   title: 'Basket',
@@ -11,3 +10,4 @@ export default {
 };
 
 const Template = (args) => <Basket {...args}  />;
+// export const BasketComponent = Template.bind({});

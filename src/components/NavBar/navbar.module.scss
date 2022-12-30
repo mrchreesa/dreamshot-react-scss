@@ -1,3 +1,6 @@
+@use "../../scss/fonts";
+@use "../../scss/colours";
+
 .container {
   display: flex;
   align-items: center;
@@ -6,6 +9,7 @@
   -webkit-filter: blur(0px);
   transition: filter 0.5s ease-in-out;
   .logo {
+    font-family: fonts.$font-family;
     width: 342px;
     height: 64px;
     color: #363636;
@@ -24,6 +28,7 @@
       border: none;
       padding: 5px 15px;
       font: inherit;
+      font-family: fonts.$font-family;
       font-size: 0.8rem;
       font-weight: 600;
       cursor: pointer;

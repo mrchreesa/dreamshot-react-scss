@@ -1,13 +1,18 @@
+@use "../../scss/fonts";
+@use "../../scss/colours";
+
 .container {
   width: 100%;
   filter: blur(0px);
   -webkit-filter: blur(0px);
   transition: filter 0.5s ease-in-out;
   margin-top: 5%;
+  font-family: fonts.$font-family;
+
   .carouselItem {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    // align-items: center;
     justify-content: space-between;
     padding: 20px;
     margin-top: 30px;
@@ -15,6 +20,11 @@
     border-radius: 30px;
     width: 179px;
     height: 220px;
+  }
+  .imgContainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
   }
   .img {
     margin-right: -100px;
@@ -47,7 +57,7 @@
     font-weight: 700;
   }
   .dollar {
-    color: #ff8515;
+    color: colours.$orange;
     margin: 0;
     padding-right: 0;
   }

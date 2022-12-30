@@ -1,6 +1,10 @@
+@use "../../scss/fonts";
+@use "../../scss/colours";
+
 .container {
   //   margin-inline: 20px;
   margin-block: 6%;
+  font-family: fonts.$font-family;
 
   display: flex;
   justify-content: center;
@@ -25,7 +29,9 @@
     border: none;
     border-radius: 10px;
     padding: 3px 15px;
-    background: #ff8515;
+    background: colours.$orange;
+    font-family: fonts.$font-family;
+
     font: inherit;
     font-weight: 700;
     font-size: 12px;

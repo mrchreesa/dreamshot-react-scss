@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../nutri-tracker/nutri-tracker-backend"
+		}
+	],
+	"settings": {
+		"git.ignoreLimitWarning": true
+	}
+}

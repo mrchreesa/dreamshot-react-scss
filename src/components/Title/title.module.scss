@@ -1,9 +1,12 @@
+@use "../../scss/fonts";
+@use "../../scss/colours";
+
 .container {
   display: flex;
   flex-direction: column;
   margin-left: 9vw;
-  //   width: 480px;
-  //   height: 249px;
+  font-family: fonts.$font-family;
+
   width: 35vw;
   filter: blur(0px);
   -webkit-filter: blur(0px);
@@ -20,7 +23,7 @@
   .titleOrange {
     font-weight: 700;
     margin: 0;
-    color: #ff8515 !important;
+    color: colours.$orange !important;
   }
   .text {
     width: 40vw;

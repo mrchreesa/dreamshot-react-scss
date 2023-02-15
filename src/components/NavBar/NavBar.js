@@ -16,7 +16,7 @@ const NavBar = ({ active }) => {
           <button className={styles.button}>
             <a
               style={{ textDecoration: "none", color: "inherit" }}
-              href="https://dreamshot.bg"
+              href="https://www.krisrahnev.com"
               target="_blank"
               rel="noreferrer"
               data-testid="about"
@@ -27,7 +27,7 @@ const NavBar = ({ active }) => {
           <button className={styles.button}>
             <a
               style={{ textDecoration: "none", color: "inherit" }}
-              href="https://dreamshot.bg"
+              href="https://www.krisrahnev.com"
               target="_blank"
               rel="noreferrer"
             >

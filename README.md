@@ -16,7 +16,7 @@ The app is fully responsive build with React and CSS modules with SASS.
 <img width="34%" src="./images/Brunchy/Tablet.png" alt="preview" />
 <img width="20%" src="./images/Brunchy/Phone.png" alt="preview" />
 </div >
-<h1 align="center"> 🏠 (https://https://dreamshot-kristian.vercel.app/) </h1>
+<h1 align="center"> 🏠 (https://brunchy-react.vercel.app/) </h1>
 </br>
 <p align="center">
  🔶🔶🔶 Technologies Used (https://github.com/mrchreesa/dreamshot-react-scss) 🔶🔶🔶
